@@ -3,7 +3,9 @@
 {% block content %}
     <h1>{{post.titulo}}</h1>
     <p class="date">
-        Publicado {{post.publicacion}} por {{post.autor}}
+        Autor: {{post.autor}}<br>
+        Editorial : {{post.editorial}} <br>
+        Edición : {{post.edicion}} 
     </p>
     {{ post.cuerpo|linebreaks}}
 {% endblock %}

@@ -4,13 +4,10 @@ from .models import Post
 # Register your models here.
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'slug', 'autor', 'fechapub', 'estado')
-    list_filter = ('estado', 'creacion', 'fechapub', 'autor')
-    search_fields = ('titulo', 'cuerpo')
-    prepopulated_fields = {'slug': ('titulo',)}
-    raw_id_fields = ('autor',)
-    date_hierarchy = 'fechapub'
-    ordering = ('estado', 'fechapub')
-        
+    list_display = ('titulo','autor','editorial','ISBN','edicion')
+    list_filter = ('titulo','autor','edicion')
+    search_fields = ('titulo','autor','ISBN')
+    ordering = ('titulo','ISBN')
+      
 
                     
